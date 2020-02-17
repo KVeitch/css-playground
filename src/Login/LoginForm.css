@@ -1,0 +1,71 @@
+.form__div--container {
+  position: relative;
+  height: 75px;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.form__login input {
+  width: 100%;
+  height: 100%;
+  color: #595F6E;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.form__login label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.form__login label::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5FA8D3;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.form__login input:focus + .label .content-name,
+.form__login input:valid + .label .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #5FA8D3;
+}
+
+.form__login input:focus + .label::after,
+.form__login input:valid + .label::after {
+  transform: translateX(0%);
+}
+
+.form__login--submit {
+  width: 100%;
+  height: 30px;
+  font-size: 1em;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  transition: 0.25s ease-in;
+}
+
+.form__login--submit:hover {
+  background-color: lightseagreen;
+}
